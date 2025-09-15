@@ -127,7 +127,7 @@ Provided comprehensive documentation and user support materials.`,
       <div
         className="
           sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm
-          dark:bg-gray-900 dark:bg-opacity-90 z-20
+          dark:bg-gray-900 dark:bg-opacity-90 z-1
           border-b border-gray-300 dark:border-gray-700 mb-8
         "
       >
