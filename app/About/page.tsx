@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function About() {
   return (
     <div
       className="
@@ -15,11 +15,9 @@ export default function Home() {
     >
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center justify-center md:justify-between">
-        
-        {/* Photo */}
         <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-10">
           <Image
-            src="/maazimg.jpg" // Put your image in /public
+            src="/maazimg.jpg"
             alt="Maaz Akhlaq"
             width={250}
             height={250}
@@ -27,7 +25,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Intro */}
         <div className="text-center md:text-left">
           <h1
             className="
@@ -43,7 +40,7 @@ export default function Home() {
             Full Stack Developer | React & Next.js Expert
           </p>
           <a
-            href="/resume.pdf" // Put resume.pdf in /public
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -66,8 +63,8 @@ export default function Home() {
           className="
             text-3xl font-extrabold text-center mb-10
             bg-clip-text text-transparent 
-            bg-gradient-to-r from-purple-600 via-indigo-500 to- green-600
-            dark:from-purple-300 dark:via-indigo-200 dark:to- green-300
+            bg-gradient-to-r from-purple-600 via-indigo-500 to-green-600
+            dark:from-purple-300 dark:via-indigo-200 dark:to-green-300
           "
         >
           My Services
@@ -76,8 +73,8 @@ export default function Home() {
           <div
             className="
               p-6 
-              bg-gradient-to-r from-indigo-100 via-purple-100 to- green-100
-              dark:from-indigo-800 dark:via-purple-800 dark:to- green-800
+              bg-gradient-to-r from-indigo-100 via-purple-100 to-green-100
+              dark:from-indigo-800 dark:via-purple-800 dark:to-green-800
               rounded-xl shadow-lg hover:shadow-2xl transition
             "
           >
@@ -88,11 +85,12 @@ export default function Home() {
               Building modern, responsive, and high-performance websites.
             </p>
           </div>
+
           <div
             className="
               p-6 
-              bg-gradient-to-r from-indigo-100 via-purple-100 to- green-100
-              dark:from-indigo-800 dark:via-purple-800 dark:to- green-800
+              bg-gradient-to-r from-indigo-100 via-purple-100 to-green-100
+              dark:from-indigo-800 dark:via-purple-800 dark:to-green-800
               rounded-xl shadow-lg hover:shadow-2xl transition
             "
           >
@@ -103,11 +101,12 @@ export default function Home() {
               Creating visually appealing and user-friendly designs.
             </p>
           </div>
+
           <div
             className="
               p-6 
-              bg-gradient-to-r from-indigo-100 via-purple-100 to- green-100
-              dark:from-indigo-800 dark:via-purple-800 dark:to- green-800
+              bg-gradient-to-r from-indigo-100 via-purple-100 to-green-100
+              dark:from-indigo-800 dark:via-purple-800 dark:to-green-800
               rounded-xl shadow-lg hover:shadow-2xl transition
             "
           >
@@ -115,7 +114,7 @@ export default function Home() {
               SEO Optimization
             </h3>
             <p className="text-gray-700 dark:text-gray-300">
-              Improving your website's visibility on search engines.
+              Improving your website&apos;s visibility on search engines.
             </p>
           </div>
         </div>
