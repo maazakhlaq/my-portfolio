@@ -1,13 +1,21 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
+
+interface Project {
+  id: string;
+  name: string;
+  desc: string;
+}
 
 export default function Projects() {
-  const projects = [
-    {
-      id: "medifusion",
-      name: "Medifusion PMS/EHR",
-      desc: `Developed and maintained core modules for a comprehensive Practice Management System (PMS) and Electronic Health Records (EHR) platform using React, Redux, and Axios.
+  // Memoize the projects array so it doesn’t re-create on every render
+  const projects = useMemo<Project[]>(
+    () => [
+      {
+        id: "medifusion",
+        name: "Medifusion PMS/EHR",
+        desc: `Developed and maintained core modules for a comprehensive Practice Management System (PMS) and Electronic Health Records (EHR) platform using React, Redux, and Axios.
 Implemented dynamic patient demographics and encounter management to streamline workflows and improve data accuracy. Integrated secure JWT authentication to protect sensitive patient data.
 Enhanced UI/UX with reusable components styled via Tailwind CSS, ensuring responsiveness across devices.
 Automated data retrieval and updates to optimize performance and reduce latency.
@@ -17,11 +25,11 @@ Ensured cross-browser compatibility and accessibility compliance.
 Developed reporting tools for patient visit analytics.
 Maintained API integrations with backend services to facilitate seamless data exchange.
 Provided ongoing support and enhancements based on user feedback.`,
-    },
-    {
-      id: "tlexy",
-      name: "Tlexy - Telemedicine Platform",
-      desc: `Architected a HIPAA-compliant telemedicine platform enabling secure, real-time video consultations using React, Redux, and Twilio SDK.
+      },
+      {
+        id: "tlexy",
+        name: "Tlexy - Telemedicine Platform",
+        desc: `Architected a HIPAA-compliant telemedicine platform enabling secure, real-time video consultations using React, Redux, and Twilio SDK.
 Integrated Twilio APIs to provide seamless video and audio streaming, as well as secure messaging features.
 Designed an analytics dashboard with Chart.js to visualize patient engagement and consultation metrics.
 Implemented role-based access control (RBAC) to manage permissions across doctors, patients, and admins.
@@ -31,11 +39,11 @@ Developed responsive UI components optimized for desktop and mobile.
 Coordinated with backend teams to align APIs for smooth data flow.
 Incorporated notification systems for appointment reminders.
 Conducted user training and produced documentation for healthcare staff.`,
-    },
-    {
-      id: "credentialing",
-      name: "Credentialing Management System",
-      desc: `Designed and implemented a full-stack credential management system utilizing React on the frontend and Node.js with Sequelize for backend and database handling.
+      },
+      {
+        id: "credentialing",
+        name: "Credentialing Management System",
+        desc: `Designed and implemented a full-stack credential management system utilizing React on the frontend and Node.js with Sequelize for backend and database handling.
 Automated credential verification workflows with expiration date tracking and notification alerts to ensure timely renewals.
 Integrated AWS S3 for secure and scalable document storage and retrieval.
 Followed NCQA standards to support primary source verification and credential checks.
@@ -45,11 +53,11 @@ Improved system reliability through comprehensive testing and continuous integra
 Collaborated with compliance teams to meet regulatory requirements.
 Optimized database queries to handle large volumes of credential data efficiently.
 Maintained audit trails and logs for data security and compliance audits.`,
-    },
-    {
-      id: "right-assist",
-      name: "The Right Assist",
-      desc: `Developed a transportation services application aimed at providing reliable medical transportation solutions using Next.js and TypeScript.
+      },
+      {
+        id: "right-assist",
+        name: "The Right Assist",
+        desc: `Developed a transportation services application aimed at providing reliable medical transportation solutions using Next.js and TypeScript.
 Converted the Next.js web application into a mobile app using Capacitor, enabling cross-platform access.
 Built a scalable backend with Vue.js and Node.js and utilized Sequelize for relational database management.
 Designed features ensuring patients get timely transportation to healthcare facilities.
@@ -59,8 +67,10 @@ Integrated real-time tracking and notifications for ride status updates.
 Collaborated with transportation providers to streamline scheduling and dispatching.
 Ensured compliance with healthcare and transportation regulations.
 Provided comprehensive documentation and user support materials.`,
-    },
-  ];
+      },
+    ],
+    []
+  );
 
   const [activeTab, setActiveTab] = useState(projects[0].id);
   const [menuOpen, setMenuOpen] = useState(false);
