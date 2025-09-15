@@ -47,7 +47,7 @@ export default function Index() {
 
       <div className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 justify-center items-start">
         {/* LinkedIn Badge */}
-        <div className="flex justify-center md:justify-start w-full md:w-auto">
+        <div className="flex justify-center items-center md:w-auto">
           <LinkedIn />
         </div>
 

@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
         <main className="flex min-h-screen" role="main">
           {/* Sticky Sidebar container */}
-          <nav aria-label="Primary navigation" className="sticky top-0 z-50  h-screen">
+          <nav aria-label="Primary navigation" className="sticky top-0 z-1  h-screen">
             <Sidebar />
           </nav>
 

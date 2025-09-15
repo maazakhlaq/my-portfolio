@@ -14,7 +14,7 @@ export default function LinkedIn() {
   }, []);
 
   return (
-    <div className="max-w-xs mx-auto p-4 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-indigo-400 dark:border-indigo-600">
+    <div className="  p-4 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-indigo-400 dark:border-indigo-600">
       
 
       <div

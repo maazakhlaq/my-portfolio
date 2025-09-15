@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { Home, User, Code, Briefcase, GraduationCap, Mail } from "lucide-react";
@@ -16,24 +17,18 @@ const navItems = [
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const activeId = pathname?.split("/")[1] || "About";
+  const activeId = pathname?.split("/")[1]?.toLowerCase() || "about";
 
   return (
     <>
       {/* Mobile Hamburger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-50 md:hidden p-2 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg 
+        className="fixed top-4 left-2 z-50 md:hidden p-2 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg
         focus:outline-none focus:ring-2 focus:ring-indigo-300 active:scale-95 transition-transform duration-300"
         aria-label="Toggle sidebar"
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2}
-          viewBox="0 0 24 24"
-        >
+        <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           {isOpen ? (
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           ) : (
@@ -44,15 +39,17 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={` h-full w-64
-        bg-gradient-to-b from-indigo-700 via-purple-700 to-blue-600 
+        className={`  md:relative md:translate-x-0       /* normal flow on desktop */
+    fixed top-0 left-0 h-screen w-64  
+        bg-gradient-to-b from-indigo-700 via-purple-700 to-blue-600
         dark:from-indigo-900 dark:via-purple-900 dark:to-blue-900
         backdrop-blur-xl text-white shadow-[0_8px_30px_rgba(0,0,0,0.3)]
-        transform transition-transform duration-300 ease-in-out z-40
         border-r border-white/10
+        transform transition-transform duration-300 ease-in-out z-40
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-        md:translate-x-0 overflow-y-auto`}
+        md:translate-x-0`}
       >
+         
         {/* Logo */}
         <div className="flex items-center justify-center h-20 border-b border-white/10">
           <Link href="/about" onClick={() => setIsOpen(false)}>
@@ -66,7 +63,7 @@ export default function Sidebar() {
         {/* Navigation */}
         <nav className="mt-6 flex flex-col space-y-2 px-4 pb-6">
           {navItems.map(({ id, label, icon }) => {
-            const isActive = activeId === label;
+            const isActive = activeId === id;
             return (
               <Link
                 key={id}
@@ -87,10 +84,10 @@ export default function Sidebar() {
         </nav>
       </aside>
 
-      {/* Overlay for Mobile */}
+      {/* Overlay for mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 md:hidden"
+          className="fixed h-0 w-0 inset-0 bg-black/50 backdrop-blur-sm z-30 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
