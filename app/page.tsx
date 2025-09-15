@@ -1,5 +1,5 @@
- import Contact from "./Contact/page";
- 
+ import About from "./About/page";
+  
 export const metadata = {
   title: "About Maaz Akhlaq – Front-end Developer | React & Next.js",
   description:
@@ -19,7 +19,7 @@ export default function Home() {
     <main className="flex min-h-screen bg-gray-50 dark:bg-gray-900">
       
         {/* Add About or Contact or other sections here */}
-        <Contact />
+        <About />
        
     </main>
   );

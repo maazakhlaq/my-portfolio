@@ -6,18 +6,18 @@ import { Home, User, Code, Briefcase, GraduationCap, Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { id: "about", label: "About", icon: <User size={18} /> },
-  { id: "skills", label: "Skills", icon: <Code size={18} /> },
-  { id: "experience", label: "Experience", icon: <Briefcase size={18} /> },
-  { id: "projects", label: "Projects", icon: <Home size={18} /> },
-  { id: "education", label: "Education", icon: <GraduationCap size={18} /> },
-  { id: "contact", label: "Contact", icon: <Mail size={18} /> },
+  { id: "/", label: "About", icon: <User size={18} /> },
+  { id: "/Skills", label: "Skills", icon: <Code size={18} /> },
+  { id: "/Experience", label: "Experience", icon: <Briefcase size={18} /> },
+  { id: "/Projects", label: "Projects", icon: <Home size={18} /> },
+  { id: "/Education", label: "Education", icon: <GraduationCap size={18} /> },
+  { id: "/Contact", label: "Contact", icon: <Mail size={18} /> },
 ];
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const activeId = pathname?.split("/")[1]?.toLowerCase() || "about";
+  const activeId = pathname || "About";
 
   return (
     <>
@@ -67,7 +67,7 @@ export default function Sidebar() {
             return (
               <Link
                 key={id}
-                href={`/${label}`}
+                href={`${id}`}
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center space-x-3 px-5 py-3 rounded-lg font-medium transition-all duration-300
                   ${
