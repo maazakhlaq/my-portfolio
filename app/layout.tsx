@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: "maazimg.jpg",
+        url: "/maazimg.jpg",
         width: 1200,
         height: 630,
         alt: 'Maaz Akhlaq | Full-Stack Developer Portfolio',
