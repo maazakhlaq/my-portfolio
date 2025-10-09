@@ -18,8 +18,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen bg-gray-50 dark:bg-gray-900">
       
-        {/* Add About or Contact or other sections here */}
-        <About />
+         <About />
        
     </main>
   );
