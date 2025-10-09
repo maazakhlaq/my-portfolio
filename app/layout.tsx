@@ -5,19 +5,33 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Maaz Akhlaq | Full-Stack Developer',
-  description: 'Portfolio of Maaz Akhlaq – Full Stack Developer specializing in React & Next.js.',
-  keywords: ['Maaz Akhlaq', 'Full Stack Developer', 'React', 'Next.js', 'Tailwind CSS', 'Riyadh', 'Portfolio'],
+  description:
+    'Portfolio of Maaz Akhlaq – Software Engineer & Frontend Developer skilled in React.js, Next.js, TypeScript, Node.js, and Tailwind CSS.',
+  keywords: [
+    'Maaz Akhlaq',
+    'Full Stack Developer',
+    'Frontend Developer',
+    'React.js',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'Tailwind CSS',
+    'JavaScript',
+    'Riyadh',
+    'Portfolio',
+  ],
 
   openGraph: {
     title: 'Maaz Akhlaq | Full-Stack Developer',
-    description: 'Portfolio of Maaz Akhlaq – Full Stack Developer specializing in React & Next.js.',
+    description:
+      'Software Engineer | Frontend Developer skilled in React.js, Next.js, TypeScript, Node.js, and Tailwind CSS. Explore my portfolio!',
     url: 'https://68c7f26ab36c3af68a64d592--adorable-cendol-594948.netlify.app',
     siteName: 'Maaz Akhlaq Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://68c7f26ab36c3af68a64d592--adorable-cendol-594948.netlify.app/og-image.jpg',
+        url: "maazimg.jpg",
         width: 1200,
         height: 630,
         alt: 'Maaz Akhlaq | Full-Stack Developer Portfolio',
@@ -25,7 +39,15 @@ export const metadata: Metadata = {
     ],
   },
 
-   
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Maaz Akhlaq | Full-Stack Developer',
+    description:
+      'Software Engineer | Frontend Developer skilled in React.js, Next.js, TypeScript, Node.js, and Tailwind CSS.',
+    images: [
+      'https://68c7f26ab36c3af68a64d592--adorable-cendol-594948.netlify.app/og-image.jpg',
+    ],
+  },
 };
 
 
