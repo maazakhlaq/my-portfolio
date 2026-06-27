@@ -1,28 +1,45 @@
 export default function Index() {
-  const jobs = [
-    {
-      title: "Front-end Developer",
-      company: "BellMedEx",
-      period: "Aug 2022 – Feb 2025",
-      details: [
-        "Developed scalable and efficient applications using React.js and Redux.",
-        "Implemented JWT authentication for secure user access.",
-        "Enhanced UI components to optimize user experience.",
-        "Collaborated with backend developers to integrate RESTful APIs.",
-      ],
-    },
-    {
-      title: "Cloud Application Developer",
-      company: "Systems Limited",
-      period: "Jan 2021 – Jul 2022",
-      details: [
-        "Built mobile-responsive components using React Native.",
-        "Implemented state management using Redux.",
-        "Debugged complex issues to improve application stability.",
-      ],
-    },
-  ];
-
+const jobs = [
+  {
+    title: "Frontend Developer",
+    company: "China Jiangsu International Economic and Technical Ltd",
+    period: "Feb 2025 – Apr 2026",
+    location: "Riyadh, Saudi Arabia",
+    details: [
+      "Developed scalable applications using React.js, Redux, Node.js, and MS SQL Server",
+      "Implemented PDF generation and download functionality for reports and HR documentation",
+      "Built interactive dashboards using React Chart.js to visualize key metrics",
+      "Developed Employee Management System with role-based access, attendance, leave, and HR management",
+      "Developed Construction Project Dashboard for project tracking, resource allocation, and financial summary",
+      "Collaborated with backend developers to integrate RESTful APIs effectively",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "BellMedEx Medical Billing Enterprises (Private) Limited",
+    period: "Feb 2023 – Jan 2025",
+    location: "Islamabad, Pakistan",
+    details: [
+      "Developed scalable and efficient frontend applications using React.js, Next.js, and Redux",
+      "Integrated react-pdf and react-to-print for in-app PDF viewing and printing functionality",
+      "Built dashboards using react-chartjs-2 for data visualization and user engagement tracking",
+      "Enhanced UI components using reusable patterns and Tailwind CSS for responsive design",
+      "Collaborated with backend developers to integrate RESTful APIs for dynamic data rendering",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "Systems Limited",
+    period: "Jan 2022 – Dec 2022",
+    location: "Islamabad, Pakistan",
+    details: [
+      "Built interactive web applications using React.js and Next.js",
+      "Implemented state management with Redux for consistency across components",
+      "Developed reusable UI components and responsive layouts using Tailwind CSS",
+      "Collaborated with backend and QA teams to deliver production-ready features in Agile sprints",
+    ],
+  },
+];
   return (
     <section
       id="skills"
